@@ -1,0 +1,13 @@
+<h1>Skype birthdays</h1>
+<% if current_user %>
+  <h2>Listing birthdays for friends of <%= @profile["name"] %> from <%= @profile["location"]["name"] %></h2>
+  <ul>
+    <% @friends.each do |friend| %>
+      <li>Name: <%= friend['name'] %>, birthday: <%= friend['birthday'] %></li>
+    <% end %>
+  </ul>
+  <hr/>
+  <a href='/logout'>logout</a>
+<% else %>
+  Hello stranger, why not <a href='/auth/facebook'>login</a> with Facebook?
+<% end %>
