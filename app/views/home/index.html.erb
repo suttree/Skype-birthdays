@@ -1,6 +1,6 @@
 <h1>Skype birthdays</h1>
 <% if current_user %>
-  <h2>Listing birthdays for friends of <%= @profile["name"] %> from <%= @profile["location"]["name"] %></h2>
+  <h2>Listing birthdays for friends of <%= @profile["name"] %></h2>
   <ul>
     <% @friends.each do |friend| %>
       <li>Name: <%= friend['name'] %>, birthday: <%= friend['birthday'] %></li>
